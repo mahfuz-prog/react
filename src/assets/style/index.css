@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  padding: 10;
+  margin: 0;
+}
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --box-shadow: rgba(15, 15, 15, 0.418);
+  
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --box-shadow: rgba(255, 255, 255, 0.418);
+  }
+}
+
+
+header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 0 var(--box-shadow); 
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page h1 {
+  color: var(--text-h);
+  margin-bottom: 12px;
+}
+
+.page-intro {
+  margin-bottom: 24px;
+}
+
+.page-links {
+  margin-top: 16px;
+  padding-left: 24px;
+}
+
+.page-links li {
+  margin-bottom: 8px;
+}
+
+.page-links a {
+  color: var(--text-h);
+}
+
+
+article {
+  width: 900px;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  margin: 30px;
+  border: 1px solid var(--text-h);
+  border-radius: 10px;
+}
+
+.thum img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.location {
+  display: flex;
+  gap: 20px;
+}
+
+footer {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid var(--text-h);
+  background-color: var(--bg);
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  width: 300px;
+  padding: 30px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
