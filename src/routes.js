@@ -3,6 +3,7 @@ import TravelJournalPage from "./pages/TravelJournalPage"
 import IngredientPage from "./pages/IngredientPage"
 import ProfilePage from "./pages/ProfilePage"
 import FormPage from "./pages/FormPage"
+import ConditonalPage from "./pages/ConditonalPage"
 
 export const routes = [
   {
@@ -33,5 +34,11 @@ export const routes = [
     label: "Form Submission",
     description: "Form functionality",
     element: FormPage,
+  },
+  {
+    path: "/conditional-rendering",
+    label: "Conditional Rendering",
+    description: "Conditional Rendering, Ternary operator",
+    element: ConditonalPage,
   },
 ]
