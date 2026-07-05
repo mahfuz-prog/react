@@ -162,3 +162,23 @@ form {
   gap: 10px;
   padding-top: 20px;
 }
+
+.pad-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+}
+
+.pad-container button {
+  height: 100px;
+  width: 100px;
+  border: 3px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: .4;
+}
+
+.pad-container button.on {
+  opacity: 1;
+}

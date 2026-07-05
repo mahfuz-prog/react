@@ -4,6 +4,7 @@ import IngredientPage from "./pages/IngredientPage"
 import ProfilePage from "./pages/ProfilePage"
 import FormPage from "./pages/FormPage"
 import ConditonalPage from "./pages/ConditonalPage"
+import ColorPalettePage from "./pages/ColorPalettePage"
 
 export const routes = [
   {
@@ -40,5 +41,11 @@ export const routes = [
     label: "Conditional Rendering",
     description: "Conditional Rendering, Ternary operator",
     element: ConditonalPage,
+  },
+  {
+    path: "/color-palette",
+    label: "Color Palette",
+    description: "Single source of truth. State, Props",
+    element: ColorPalettePage,
   },
 ]
