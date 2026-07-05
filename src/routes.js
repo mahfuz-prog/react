@@ -5,6 +5,7 @@ import ProfilePage from "./pages/ProfilePage"
 import FormPage from "./pages/FormPage"
 import ConditonalPage from "./pages/ConditonalPage"
 import ColorPalettePage from "./pages/ColorPalettePage"
+import MemeGeneratorPage from "./pages/MemeGeneratorPage"
 
 export const routes = [
   {
@@ -47,5 +48,11 @@ export const routes = [
     label: "Color Palette",
     description: "Single source of truth. State, Props",
     element: ColorPalettePage,
+  },
+  {
+    path: "/meme-generator",
+    label: "Meme Generator",
+    description: "Controlled components (forms), Functional programming in React, Fetching data, Side effects",
+    element: MemeGeneratorPage
   },
 ]

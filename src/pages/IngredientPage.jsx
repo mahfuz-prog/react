@@ -3,7 +3,6 @@ import Form from "../components/ingredient_page/Form"
 import ShowIngredient from "../components/ingredient_page/ShowIngredient"
 import GetRecipe from "../components/ingredient_page/GetRecipe"
 import ShowRecipe from "../components/ingredient_page/Recipe"
-import Recipe from "../components/ingredient_page/Recipe"
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`
@@ -27,7 +26,8 @@ export default function AddIngredient() {
     // check empty ingredient list
     if (ingredientList.length < 3) {
       // throw new Error("Empty ingredient list!")
-      setError((prev) => "Empty ingredient list!")
+      setError((prev) => "Minimum 3 ingredients needed!")
+      return
     }
 
     try {
