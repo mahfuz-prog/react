@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Form from "../components/ingredient_page/Form"
 import ShowIngredient from "../components/ingredient_page/ShowIngredient"
 import GetRecipe from "../components/ingredient_page/GetRecipe"
@@ -13,20 +13,25 @@ not to include too many extra ingredients. Format your response in markdown to m
 render to a web page`
 
 export default function AddIngredient() {
-  const [ingredientList, setIngredientList] = useState([])
+  const [ingredientList, setIngredientList] = useState([
+    "orange",
+    "banana",
+    "mango",
+  ])
   const [recipe, setRecipe] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const recipeSection = useRef(null)
 
   const fetchRecipe = async () => {
-    setLoading((prev) => true)
-    setRecipe((prev) => "")
-    setError((prev) => null)
+    setLoading(true)
+    setRecipe("")
+    setError(null)
 
     // check empty ingredient list
     if (ingredientList.length < 3) {
       // throw new Error("Empty ingredient list!")
-      setError((prev) => "Minimum 3 ingredients needed!")
+      setError("Minimum 3 ingredients needed!")
       return
     }
 
@@ -75,11 +80,23 @@ export default function AddIngredient() {
     }
   }
 
+  // scrolling effect
+  useEffect(() => {
+    if (recipe && recipeSection.current !== null) {
+      recipeSection.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [recipe])
+
   return (
     <div style={{ width: "500px" }}>
       <Form setIngredientList={setIngredientList} />
       <ShowIngredient ingredientList={ingredientList} />
-      <GetRecipe getResponse={fetchRecipe} error={error} loading={loading} />
+      <GetRecipe
+        getResponse={fetchRecipe}
+        error={error}
+        loading={loading}
+        ref={recipeSection}
+      />
       {recipe && !loading ? <ShowRecipe recipeMarkdown={recipe} /> : null}
     </div>
   )

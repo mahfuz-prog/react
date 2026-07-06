@@ -1,6 +1,6 @@
 export default function GetRecipe(props) {
   return (
-    <div className="recipe">
+    <div className="recipe" ref={props.ref}>
       <h3>Ready for a recipe?</h3>
       <span>generate a recipe from your list of ingredients.</span>
       <button onClick={props.getResponse}>Get a recipe</button>
