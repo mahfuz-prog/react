@@ -319,7 +319,7 @@ form {
 }
 
 .languages {
-  width: 600px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,6 +334,8 @@ form {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .languages ul li {
@@ -372,6 +374,8 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .keyboard ul li {
