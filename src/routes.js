@@ -8,6 +8,7 @@ import ColorPalettePage from "./pages/ColorPalettePage"
 import MemeGeneratorPage from "./pages/MemeGeneratorPage"
 import TenziesPage from "./pages/TenziesPage"
 import TutorialTenziesPage from "./pages/TutorialTenziesPage"
+import EndgamePage from "./pages/EndgamePage"
 
 export const routes = [
   {
@@ -68,5 +69,11 @@ export const routes = [
     label: "Tutorial Tenzies Game",
     description: "Following the tutorial.",
     element: TutorialTenziesPage
+  },
+  {
+    path: "/endgame",
+    label: "Assembly Endgame",
+    description: "Simple game application.",
+    element: EndgamePage
   },
 ]

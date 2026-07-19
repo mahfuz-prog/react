@@ -3,8 +3,8 @@ import { nanoid } from "nanoid"
 
 import Confetti from "react-confetti"
 import Header from "../components/tenzies_page/Header"
-import Die from "../components/totorail_tenzies_page/Die"
-import Roll from "../components/totorail_tenzies_page/Roll"
+import Die from "../components/tutorail_tenzies_page/Die"
+import Roll from "../components/tutorail_tenzies_page/Roll"
 
 export default function TutorialTenziesPage() {
   // by () => generateAllNewDice() doing this when the dice state changes
